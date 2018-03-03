@@ -4,21 +4,24 @@ import (
 	"fmt"
 )
 
-func intopost(infix string) string {
+func intopost(infix string) string { //function to convert inflix regExp to postfix regExp
 
-	postfix := ""
+	specials := map[rune]int{'*': 10, '.': 9, '|': 8} //create a map for special characters which will be used in this program
 
-	return postfix
+	pofix := []rune{}
+	s := []rune{}
+
+	return string(pofix)
 }
 
 func main() {
 
 	//answer ab.c*.
-	fmt.Println("Infix :  ", "a.b.c")
+	fmt.Println("Infix :  ", "a.b.c*") //A followed by B, followed by zero or more C
 	fmt.Println("Postfix : ", intopost("a.b.c*"))
 
 	//answer abd|.*
-	fmt.Println("Infix :  ", "(a.(b|d))*")
+	fmt.Println("Infix :  ", "(a.(b|d))*") //Zero or more of A followed by B or D
 	fmt.Println("Postfix : ", intopost("(a.(b|d))*"))
 
 	//answer abd|.c*.
