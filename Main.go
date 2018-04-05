@@ -155,20 +155,22 @@ func pomatch(po string, s string) bool { //find out if pofix regexp matches the 
 }
 
 func main() {
-	reader := bufio.NewReader(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("---User Input---")
 
 	fmt.Println("Enter RegExp :")
-	regExpUserInput, _ := reader.ReadString('\n')
+	scanner.Scan()
+	regExpUserInput := scanner.Text()
 
 	fmt.Println("Enter String to check against :")
-	stringUserInput, _ := reader.ReadString('\n')
+	scanner.Scan()
+	stringUserInput := scanner.Text()
 
 	pofixUserRegexp := (intopost(regExpUserInput))
 
 	fmt.Println("Infix :  ", regExpUserInput)
 	fmt.Println("Postfix : ", pofixUserRegexp)
 
-	fmt.Println(pomatch(pofixUserRegexp, stringUserInput))
+	fmt.Println("Match : ", (pomatch(pofixUserRegexp, stringUserInput)))
 }
