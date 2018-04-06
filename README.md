@@ -27,12 +27,12 @@ Running Main.go will give you all these programs together in one. These programs
 
 ![](https://i.imgur.com/Ciaoy3d.png)
 
- a.b means an **a** followed by a **b** 
- a|b means an **a** or a **b**.
+ - a.b means an **a** followed by a **b** 
+ - a|b means an **a** or a **b**.
  
  ![](https://i.imgur.com/9iRjSGD.png)
  
- a* means any number of **a**'s
+ - a* means any number of **a**'s
 
 # Technologies used:
 
