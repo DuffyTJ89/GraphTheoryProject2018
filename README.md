@@ -25,12 +25,12 @@ There are smaller programs also contained in this repo that do smaller jobs. e.g
 
 ![](https://i.imgur.com/Ciaoy3d.png)
 
- a.b means an a followed by a b 
- a|b means an a or a b.
+ - a.b means an a followed by a b 
+ - a|b means an a or a b.
  
  ![](https://i.imgur.com/9iRjSGD.png)
  
- a* means any number of a's
+ - a* means any number of a's
 
 # Technologies used:
 
