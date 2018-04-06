@@ -19,7 +19,9 @@ Clone the repo and open git bash (or similar) in the folder and then type :
 
 The program will run and you will be asked to enter the Regular expression you want to use. Then you will be asked to input a string to check against that regular expression. The result will be printed out to your screen.
 
-There are smaller programs also contained in this repo that do smaller jobs. e.g shunt.go implements the shunting yard algroithm which can be used to change Regular expressions from Infix notation to pofix notation. Running Main.go will give you all these programs together in one. These programs are included to show how the project was written stage by stage.
+There are smaller programs also contained in this repo that do smaller jobs. e.g shunt.go implements the shunting yard algroithm which can be used to change Regular expressions from Infix notation to pofix notation. nfa.go implements Thompson's construction in Go and rega.go matches the string to the regular expression. 
+
+Running Main.go will give you all these programs together in one. These programs are included to show how the project was written stage by stage.
 
 # ScreenShots:
 
