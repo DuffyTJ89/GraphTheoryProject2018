@@ -37,7 +37,7 @@ There are smaller programs also contained in this repo that do smaller jobs. e.g
 This project is written in the GO programming language. 
 
 # Resources used :
-- Class Notes and Instructions
+- Class Notes and Instructions provided by Dr Ian McLoughlin
 - StackOverFlow 
 - Regular Expression Matching Can Be Simple And Fast by Russ Cox   https://swtch.com/~rsc/regexp/regexp1.html
 - https://dillinger.io/ to edit markdown and check in real time.
