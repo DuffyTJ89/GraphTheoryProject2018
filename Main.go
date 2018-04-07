@@ -21,7 +21,7 @@ type nfa struct { //keep track of initial and accept states
 
 func intopost(infix string) string { //function to convert inflix regExp to postfix regExp
 
-	specials := map[rune]int{'*': 10, '.': 9, '|': 8} //create a map for special characters which will be used in this program
+	specials := map[rune]int{'*': 10, '.': 9, '|': 8, '+': 7} //create a map for special characters which will be used in this program
 
 	pofix := []rune{}
 	s := []rune{}
@@ -101,6 +101,17 @@ func poregtonfa(pofix string) *nfa { //return pointer to nfa
 
 			nfaStack = append(nfaStack, &nfa{initial: &initial, accept: &accept}) //push new frag to nfa stack
 
+		case '+':
+			//only pop one frag off the nfa stack
+			frag := nfaStack[len(nfaStack)-1]
+			nfaStack = nfaStack[:len(nfaStack)-1]
+
+			accept := state{}
+			initial := state{edge1: frag.initial, edge2: &accept}
+			frag.accept.edge1 = frag.initial
+
+			nfaStack = append(nfaStack, &nfa{initial: &initial, accept: &accept}) //push new frag to nfa stack
+
 		default:
 			accept := state{}
 			initial := state{symbol: r, edge1: &accept} //label new accept state with symbol r
@@ -158,14 +169,17 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("---User Input---")
+	fmt.Println("")
 
 	fmt.Println("Enter RegExp :")
 	scanner.Scan()
 	regExpUserInput := scanner.Text()
+	fmt.Println("")
 
 	fmt.Println("Enter String to check against :")
 	scanner.Scan()
 	stringUserInput := scanner.Text()
+	fmt.Println("")
 
 	pofixUserRegexp := (intopost(regExpUserInput))
 
