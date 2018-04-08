@@ -33,6 +33,10 @@ Running Main.go will give you all these programs together in one. These programs
  ![](https://i.imgur.com/9iRjSGD.png)
  
  - a* means any number of **a**'s
+ 
+ ![](https://i.imgur.com/MSeZO2M.png]
+ 
+ - a+.b means one or more a's followed by b
 
 # Technologies used:
 
